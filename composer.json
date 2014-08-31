@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Air\\Routing\\Dispatcher": "src/dispatcher"
+            "Air\\Routing\\Dispatcher\\": "src/dispatcher"
         }
     },
 	"minimum-stability": "dev"
