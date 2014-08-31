@@ -1,0 +1,17 @@
+{
+    "name": "air-php/dispatcher",
+    "version": "0.1",
+    "type": "library",
+    "description": "A route dispatching library.",
+    "require": {
+        "php": ">=5.5.0",
+        "phpunit/phpunit": "4.1.*",
+		"container-interop/container-interop": "~1.0",
+		"air-php/routing": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Air\\Routing\\Dispatcher": "src/dispatcher"
+        }
+    }
+}
