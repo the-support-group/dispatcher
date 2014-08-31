@@ -1,4 +1,6 @@
 # Dispatcher
+[![Build Status](https://scrutinizer-ci.com/g/air-php/dispatcher/badges/build.png?b=master)](https://scrutinizer-ci.com/g/air-php/dispatcher/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/air-php/dispatcher/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/air-php/dispatcher/?branch=master)
+
 The dispatcher library includes classes for dispatching web application routes.
 
 ## Installation
