@@ -5,7 +5,7 @@ namespace Air\Routing\Dispatcher;
 use Air\Routing\ResolvedRequest\ResolvedRequestInterface;
 use Interop\Container\ContainerInterface;
 
-class Dispatcher
+class Dispatcher implements DispatcherInterface
 {
     /**
      * @var ContainerInterface $container The DI container.
