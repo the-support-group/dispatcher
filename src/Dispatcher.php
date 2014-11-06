@@ -45,7 +45,8 @@ class Dispatcher implements DispatcherInterface
             [
                 $resolvedRequest->getUriParameters(),
                 [
-                    'params' => $request->getQueryParameters()
+                    'post' => $request->getPostData(),
+                    'get' => $request->getQueryParameters()
                 ]
             ]
         );
