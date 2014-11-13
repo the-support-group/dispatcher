@@ -42,13 +42,7 @@ class Dispatcher implements DispatcherInterface
         // Call the action.
         $response = call_user_func_array(
             [$controller, 'action' . $route->getAction()],
-            [
-                $resolvedRequest->getUriParameters(),
-                [
-                    'post' => $request->getPostData(),
-                    'get' => $request->getQueryParameters()
-                ]
-            ]
+            [$resolvedRequest]
         );
 
         // Call the after hook, if defined.
