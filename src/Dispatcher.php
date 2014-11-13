@@ -31,7 +31,6 @@ class Dispatcher implements DispatcherInterface
     public function dispatch(ResolvedRequestInterface $resolvedRequest)
     {
         $route = $resolvedRequest->getRoute();
-        $request = $resolvedRequest->getRequest();
         $controller = $this->container->get($route->getController());
 
         // Call the before hook, if defined.
