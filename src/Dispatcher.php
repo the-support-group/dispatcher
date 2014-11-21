@@ -35,7 +35,7 @@ class Dispatcher implements DispatcherInterface
 
         // Call the before hook, if defined.
         if (method_exists($controller, 'before')) {
-            $controller->before();
+            $controller->before($resolvedRequest);
         }
 
         // Call the action.
@@ -46,7 +46,7 @@ class Dispatcher implements DispatcherInterface
 
         // Call the after hook, if defined.
         if (method_exists($controller, 'after')) {
-            $controller->after();
+            $controller->after($resolvedRequest);
         }
 
         return $response;
