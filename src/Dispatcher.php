@@ -35,18 +35,24 @@ class Dispatcher implements DispatcherInterface
 
         // Call the before hook, if defined.
         if (method_exists($controller, 'before')) {
-            $controller->before($resolvedRequest);
+            $this->container->call(
+                [$controller, 'before'],
+                ['resolvedRequest' => $resolvedRequest] // The resolvedRequest parameter should always receive this.
+            );
         }
 
         // Call the action.
-        $response = call_user_func_array(
+        $response = $this->container->call(
             [$controller, 'action' . $route->getAction()],
-            [$resolvedRequest]
+            ['resolvedRequest' => $resolvedRequest] // The resolvedRequest parameter should always receive this.
         );
 
         // Call the after hook, if defined.
         if (method_exists($controller, 'after')) {
-            $controller->after($resolvedRequest);
+            $this->container->call(
+                [$controller, 'after'],
+                ['resolvedRequest' => $resolvedRequest] // The resolvedRequest parameter should always receive this.
+            );
         }
 
         return $response;
