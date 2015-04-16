@@ -1,6 +1,6 @@
 {
     "name": "air-php/dispatcher",
-    "version": "0.2",
+    "version": "0.3",
     "type": "library",
     "description": "A route dispatching library.",
     "require": {
