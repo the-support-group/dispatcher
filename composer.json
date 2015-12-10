@@ -5,7 +5,7 @@
     "description": "A route dispatching library.",
     "require": {
         "php": ">=5.5.0",
-        "phpunit/phpunit": "~4.1",
+        "phpunit/phpunit": "~5.0",
 	"container-interop/container-interop": "~1.0",
 	"air-php/routing": "~0.1"
     },
